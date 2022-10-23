@@ -21,6 +21,19 @@ body {
   left: 50%;
   border-radius: 8px;
   box-shadow: 0 20px 50px black;
-
-
+}
+.display {
+  width: 100%;
+}
+.display input {
+  width: 100%;
+  padding: 15px 10px;
+  text-align: right;
+  border: none;
+  background-color: transparent;
+  color: antiquewhite;
+  font-size: 35px;
+}
+.display input::placeholder{
+  color: white
 }
