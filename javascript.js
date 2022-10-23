@@ -23,5 +23,23 @@ button_input.forEach((button_class) => {
 //solve input
 equal.addEventListener("click", () => {
   equal_pressed = 1;
-  console.log(equal_pressed);
+  let inp_val = input.value;
+  try {
+    let solution = eval(inp_val);
+    if (Number.isInteger(solution)) {
+      input.value = solution;
+    } else {
+      input.value = solution.toFixed(2);
+    }
+  } catch (err) {
+    alert("Invalid Input");
+  }
+});
+// clear input all
+clear.addEventListener("click", () => {
+  input.value = "";
+});
+// clear single input
+erase.addEventListener("click", () => {
+  input.value = input.value.substr(0, input.value.length - 1);
 });
